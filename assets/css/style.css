@@ -1,0 +1,315 @@
+   :root {
+       --blue: #005DAA;
+       --green: #20B898;
+       --white: #ffffff;
+       --light-gray: #f8f9fa;
+       --mid-gray: #e0e6ed;
+       --dark-gray: #555;
+   }
+
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+
+   body {
+       font-family: 'Open Sans', sans-serif;
+       color: #333;
+       line-height: 1.6;
+       background: var(--white);
+   }
+
+   h1,
+   h2,
+   h3,
+   h4,
+   h5 {
+       font-family: 'Montserrat', sans-serif;
+       font-weight: 600;
+   }
+
+   a {
+       text-decoration: none;
+       color: inherit;
+   }
+
+   /* Header & Navigation */
+   header {
+       background: var(--white);
+       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+       position: sticky;
+       top: 0;
+       z-index: 1000;
+   }
+
+   nav {
+       max-width: 1400px;
+       margin: 0 auto;
+       padding: 1rem 2rem;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+
+   .logo {
+       font-family: 'Montserrat', sans-serif;
+       font-weight: 700;
+       font-size: 1.8rem;
+       color: var(--blue);
+   }
+
+   .logo span {
+       color: var(--green);
+   }
+
+   .nav-links {
+       display: flex;
+       gap: 2.5rem;
+   }
+
+   .nav-links a {
+       font-weight: 500;
+       color: var(--dark-gray);
+       transition: color 0.3s;
+   }
+
+   .nav-links a:hover {
+       color: var(--blue);
+   }
+
+   /* Hero Section */
+   .hero {
+       background: linear-gradient(rgba(0, 93, 170, 0.85), rgba(0, 93, 170, 0.85)), url('https://images.unsplash.com/photo-1551601651-bc40c3a26d1f?q=80&w=2535&auto=format&fit=crop') center/cover no-repeat;
+       color: white;
+       text-align: center;
+       padding: 160px 20px 100px;
+   }
+
+   .hero h1 {
+       font-size: 3.5rem;
+       margin-bottom: 1rem;
+   }
+
+   .hero p {
+       font-size: 1.3rem;
+       max-width: 700px;
+       margin: 0 auto 2.5rem;
+   }
+
+   .cta-buttons {
+       display: flex;
+       gap: 1.5rem;
+       justify-content: center;
+       flex-wrap: wrap;
+   }
+
+   .btn {
+       padding: 14px 32px;
+       border-radius: 50px;
+       font-weight: 600;
+       font-size: 1.1rem;
+       transition: all 0.3s;
+       display: inline-block;
+   }
+
+   .btn-primary {
+       background: var(--green);
+       color: white;
+   }
+
+   .btn-primary:hover {
+       background: #1aa685;
+       transform: translateY(-3px);
+   }
+
+   .btn-outline {
+       background: transparent;
+       border: 2px solid white;
+       color: white;
+   }
+
+   .btn-outline:hover {
+       background: white;
+       color: var(--blue);
+   }
+
+   /* Emergency Bar */
+   .emergency-bar {
+       background: var(--blue);
+       color: white;
+       text-align: center;
+       padding: 12px 0;
+       font-size: 1.1rem;
+       font-weight: 600;
+   }
+
+   .emergency-bar i {
+       color: #ff4444;
+       margin-right: 8px;
+   }
+
+   /* Main Content */
+   .container {
+       max-width: 1400px;
+       margin: 0 auto;
+       padding: 0 2rem;
+   }
+
+   section {
+       padding: 80px 0;
+   }
+
+   /* Cards */
+   .section-title {
+       text-align: center;
+       font-size: 2.5rem;
+       margin-bottom: 3rem;
+       color: var(--blue);
+   }
+
+   .grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+       gap: 2rem;
+   }
+
+   .card {
+       background: white;
+       border-radius: 16px;
+       overflow: hidden;
+       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+       transition: transform 0.3s, box-shadow 0.3s;
+   }
+
+   .card:hover {
+       transform: translateY(-10px);
+       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+   }
+
+   .card-icon {
+       background: var(--blue);
+       color: white;
+       padding: 1.8rem;
+       text-align: center;
+       font-size: 2.5rem;
+   }
+
+   .card-body {
+       padding: 1.8rem;
+   }
+
+   .card-body h3 {
+       margin-bottom: 0.8rem;
+       color: var(--blue);
+   }
+
+   /* Doctors */
+   .doctor-card img {
+       width: 100%;
+       height: 300px;
+       object-fit: cover;
+   }
+
+   .doctor-info {
+       padding: 1.5rem;
+       text-align: center;
+   }
+
+   .doctor-info h3 {
+       color: var(--blue);
+       margin-bottom: 0.3rem;
+   }
+
+   .doctor-info .specialty {
+       color: var(--green);
+       font-weight: 600;
+       margin-bottom: 1rem;
+   }
+
+   /* Testimonials & Portal */
+   .testimonials,
+   .departments {
+       background: var(--light-gray);
+   }
+
+   .testimonial-card {
+       background: white;
+       padding: 2.5rem;
+       border-radius: 16px;
+       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+   }
+
+   .testimonial-card p {
+       font-style: italic;
+       margin-bottom: 1.5rem;
+       font-size: 1.1rem;
+   }
+
+   .patient-name {
+       font-weight: 600;
+       color: var(--blue);
+   }
+
+   .portal {
+       background: linear-gradient(135deg, var(--blue), var(--green));
+       color: white;
+       text-align: center;
+   }
+
+   .portal h2 {
+       color: white;
+   }
+
+   /* Footer */
+   footer {
+       background: #0a3d6e;
+       color: #ccc;
+       padding: 60px 0 30px;
+   }
+
+   .footer-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+       gap: 3rem;
+       margin-bottom: 3rem;
+   }
+
+   .footer-col h3 {
+       color: white;
+       margin-bottom: 1.5rem;
+       font-size: 1.3rem;
+   }
+
+   .footer-col a {
+       display: block;
+       margin-bottom: 0.8rem;
+       transition: color 0.3s;
+   }
+
+   .footer-col a:hover {
+       color: var(--green);
+   }
+
+   .copyright {
+       text-align: center;
+       padding-top: 2rem;
+       border-top: 1px solid #1e5a8c;
+       color: #888;
+   }
+
+   @media (max-width: 768px) {
+       .hero h1 {
+           font-size: 2.6rem;
+       }
+
+       .cta-buttons {
+           flex-direction: column;
+           align-items: center;
+       }
+
+       nav {
+           flex-direction: column;
+           gap: 1rem;
+       }
+   }
